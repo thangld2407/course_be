@@ -1,0 +1,26 @@
+/node_modules
+
+
+# remove dotenv
+.env
+.env.development
+.env.production
+
+
+package-lock.json
+./package-lock.json
+npm-debug.log
+yarn-error.log 
+
+# remove public file css
+public/css/main.css.map
+public/css/main.css
+
+
+# remove dist
+
+dist
+
+# Remove upload folder in src/assets with ext is word pdf
+
+src/assets/uploads/*.{doc,docx,pdf}
