@@ -12,7 +12,7 @@ const PointModel = new mongoose.Schema(
     },
     assigment: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Assignments",
+      ref: "Assignment",
     },
   },
   {

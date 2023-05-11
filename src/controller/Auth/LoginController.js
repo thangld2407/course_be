@@ -33,6 +33,8 @@ export default async function (req, res) {
       email,
     }).lean();
 
+    console.log(is_exist);
+
     if (!is_exist) {
       const error = errorHandle(102);
       return res.status(200).json({

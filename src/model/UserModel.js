@@ -35,6 +35,10 @@ const UserModel = new mongoose.Schema(
       enum: ["admin", "teacher", "student"],
       default: "student",
     },
+    is_deleted: {
+      type: Boolean,
+      default: false,
+    },
   },
   {
     timestamps: {

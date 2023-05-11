@@ -14,6 +14,16 @@ export default async function (req, res) {
         status_code: 200,
         data: listClass,
       });
+    } else if (user && user.role === "teacher") {
+      const listClass = await RegisterClassModel.find({ user: user._id })
+        .populate("class")
+        .lean();
+      return res.status(200).json({
+        error_code: 0,
+        message: "Success",
+        status_code: 200,
+        data: listClass,
+      });
     } else {
       const listClass = await ClassModel.find({}).lean();
       return res.status(200).json({

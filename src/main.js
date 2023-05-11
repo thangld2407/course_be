@@ -9,7 +9,7 @@ import connectDb from "@/utils/DBConnect";
 const app = express();
 
 // Static files
-app.use(express.static(__dirname + "./src/assets"));
+app.use(express.static(__dirname + "/assets"));
 
 // Body parser
 app.use(express.json());
@@ -20,7 +20,7 @@ app.use(morgan("dev"));
 // Cors for cross origin requests
 app.use(
   cors({
-    origin: process.env.CORS_ORIGIN,
+    origin: "*",
   })
 );
 

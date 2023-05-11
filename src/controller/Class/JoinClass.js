@@ -6,6 +6,7 @@ export default async function (req, res) {
     const { class_code } = req.body;
     const user = req.state.user;
     const findClass = await ClassModel.findOne({ class_code }).lean();
+
     if (!findClass) {
       return res.status(200).json({
         error_code: 2000,
