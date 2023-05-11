@@ -11,8 +11,12 @@ const AssignmentModel = new mongoose.Schema(
       default: "",
     },
     documentation: {
+      type: Array,
+      default: [],
+    },
+    due_date: {
       type: String,
-      default: "",
+      required: true,
     },
     class: {
       type: mongoose.Schema.Types.ObjectId,
