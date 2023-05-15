@@ -23,4 +23,4 @@ dist
 
 # Remove upload folder in src/assets with ext is word pdf
 
-src/assets/uploads/*.{doc,docx,pdf}
+src/assets/uploads/*.{doc,docx,pdf,jpg,png,jpeg}
