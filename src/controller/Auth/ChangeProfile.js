@@ -10,7 +10,7 @@ export default async function (req, res) {
       });
     }
 
-    const { name, address } = req.body;
+    const { name, address, avatar } = req.body;
     await UserModel.updateOne(
       {
         _id: user._id,
@@ -18,6 +18,7 @@ export default async function (req, res) {
       {
         name,
         address,
+        avatar
       }
     );
 
